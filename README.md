@@ -3,12 +3,15 @@ Unix command-line programs are usually configured using plain-text hidden files1
 
 Some other examples of tools that can be configured through dotfiles are:
 
-bash - ~/.bash_profile
-git - ~/.gitconfig
-vim - ~/.vimrc folder
-ssh - ~/.ssh/config
-tmux - ~/.tmux.conf
-How should you organize your dotfiles? They should be in their own folder, under version control, and symlinked into place using a script. This has the benefits of:
+- `bash` - `~/.bashrc`, `~/.bash_profile`
+- `git` - `~/.gitconfig`
+- `vim` - `~/.vimrc` and the `~/.vim` folder
+- `ssh` - `~/.ssh/config`
+- `tmux` - `~/.tmux.conf`
+
+How should you organize your dotfiles? They should be in their own folder,
+under version control, and **symlinked** into place using a script. This has
+the benefits of:
 
 - **Easy installation**: if you log in to a new machine, applying your customizations will only take a minute.
 - **Portability**: your tools will work the same way everywhere.
