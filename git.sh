@@ -79,10 +79,10 @@ git show                    # shows one or more objects (blobs, trees, tags and 
 git diff                     # show changes between commits, commit and working tree
 git diff HEAD               #show changes between working directory vs last commit
 git diff --staged HEAD    #show changes between stage area vs last commit
-
+git diff --name-only base-commit target-commit #show file changes between the commit
 git diff --color             # show colored diff
 git diff --staged            # Shows changes staged for commit
-
+git diff source-branch target-branch # Preview changes between branch
 git tag                           # shows all the tags
 git tag -a v1.0 -m "msg"          # creates an annotated tag
 git show v1.0                     # shows the description of version-1.0 tag
@@ -107,6 +107,7 @@ git stash branch my-branch stash@{1} # creates a branch from your stash
 git stash drop stash@{1}             # deletes the {1} stash
 git stash clear                      # clears all the stash
 
+git rebase source-branch target-branch # Fetch the current commits timeline from the remote branch and apply the new commits from the local branch on top of it
 git rebase -i <commit_id>         # Rebase commits from a commit ID
 git rebase --abort                # Abort a running rebase
 git rebase --continue             # Continue rebasing after fixing all conflicts
