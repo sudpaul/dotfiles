@@ -71,6 +71,7 @@ git commit -m "title" -m "description" # commit changes with a title and descrip
 git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
 git commit --amend --no-edit # amends a commit without changing its commit message
 git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
+git push origin branch-name # Push a branch to your remote repository
 git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
 git revert <commit-id>       # Undo a commit by creating a new commit
 
@@ -90,6 +91,7 @@ git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to
 git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
 git fetch --tags                  # pulls the tags from remote
 
+git pull                       # Update local repository to the newest commit 
 git pull my-remote my-branch   # pulls and tries to merge my-branch from my-remote to the current branch git pull = git fetch && get merge
 
 
