@@ -71,6 +71,7 @@ git commit -m "title" -m "description" # commit changes with a title and descrip
 git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
 git commit --amend --no-edit # amends a commit without changing its commit message
 git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
+git push origin branch-name # Push a branch to your remote repository
 git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
 git revert <commit-id>       # Undo a commit by creating a new commit
 
@@ -78,10 +79,10 @@ git show                    # shows one or more objects (blobs, trees, tags and 
 git diff                     # show changes between commits, commit and working tree
 git diff HEAD               #show changes between working directory vs last commit
 git diff --staged HEAD    #show changes between stage area vs last commit
-
+git diff --name-only base-commit target-commit #show file changes between the commit
 git diff --color             # show colored diff
 git diff --staged            # Shows changes staged for commit
-
+git diff source-branch target-branch # Preview changes between branch
 git tag                           # shows all the tags
 git tag -a v1.0 -m "msg"          # creates an annotated tag
 git show v1.0                     # shows the description of version-1.0 tag
@@ -90,6 +91,7 @@ git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to
 git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
 git fetch --tags                  # pulls the tags from remote
 
+git pull                       # Update local repository to the newest commit 
 git pull my-remote my-branch   # pulls and tries to merge my-branch from my-remote to the current branch git pull = git fetch && get merge
 
 # Sync config to get any submodule changes throughout
@@ -113,6 +115,7 @@ git stash branch my-branch stash@{1} # creates a branch from your stash
 git stash drop stash@{1}             # deletes the {1} stash
 git stash clear                      # clears all the stash
 
+git rebase source-branch target-branch # Fetch the current commits timeline from the remote branch and apply the new commits from the local branch on top of it
 git rebase -i <commit_id>         # Rebase commits from a commit ID
 git rebase --abort                # Abort a running rebase
 git rebase --continue             # Continue rebasing after fixing all conflicts
