@@ -92,6 +92,14 @@ git fetch --tags                  # pulls the tags from remote
 
 git pull my-remote my-branch   # pulls and tries to merge my-branch from my-remote to the current branch git pull = git fetch && get merge
 
+# Sync config to get any submodule changes throughout
+# submodule tree
+git submodule sync --recursive
+
+# Update the submodules and init them if they have
+# not yet been initialized. Perform across all
+# submodule tree
+git submodule update --init --recursive
 
 git stash                            # stashes the staged and unstaged changes (git status will be clean after it)
 git stash -u                         # stash everything including new untracked files (but not .gitignore)
