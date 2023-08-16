@@ -54,6 +54,8 @@ git log --no-pager    # shows the log of commits without less command
 git log --oneline            # shows the log of commits, each commit in a single line
 
 git log --oneline --graph --decorate    # shows the log of commits, each commit in a single line with graph 
+# Adding style to format the graph log output
+git log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 git log --since=<time>                    # shows the log of commits since given time
 git log -- <file_name>
 git log -p <file_name>       # change over time for a specific file
